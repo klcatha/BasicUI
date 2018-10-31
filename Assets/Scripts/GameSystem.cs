@@ -58,6 +58,45 @@ public class GameSystem : MonoBehaviour {
 		Debug.Log("Back");
 	}
 
+	public void Reset()
+	{
+		Application.LoadLevel(0);
+	}
+
+	public void Submit()
+	{
+		Debug.Log("Player Name: " + nameField.text);
+		Debug.Log("Player Type: " + playerType.ToString());
+		Debug.Log("Main Image Scale: " + playerImage.transform.localScale);
+	}
+
+	public void ChangePlayerType(int index)
+	{
+		ChangePlayerType ((PlayerType)index);
+	}
+
+	public void ChangePlayerType(PlayerType type)
+	{
+		if (playerType == type) return;
+
+		playerType = type;
+		switch (type)
+		{
+			case PlayerType.Monster:
+				playerImage.sprite = monsterSprite;
+				break;
+			case PlayerType.Merman:
+				playerImage.sprite = mermanSprite;
+				break;
+			case PlayerType.Robot:
+				playerImage.sprite = robotSprite;
+				break;
+			default:
+				break;
+		}
+		playerImage.SetNativeSize();
+	}
+
 	// Use this for initialization
 	void Start () {
 		
