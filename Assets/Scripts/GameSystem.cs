@@ -7,6 +7,17 @@ public class GameSystem : MonoBehaviour {
 
 	[SerializeField]
 	private InputField nameField;
+	[SerializeField]
+	private Image playerImage;
+	[SerializeField]
+	private Slider playerImageScaleSlider;
+
+	[SerializeField]
+	private Sprite monsterSprite;
+	[SerializeField]
+	private Sprite mermanSprite;
+	[SerializeField]
+	private Sprite robotSprite;
 
 	public void Back()
 	{
