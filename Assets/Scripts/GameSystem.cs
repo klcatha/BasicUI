@@ -19,6 +19,16 @@ public class GameSystem : MonoBehaviour {
 	[SerializeField]
 	private Sprite robotSprite;
 
+	public enum PlayerType
+	{
+		Monster,
+		Merman,
+		Robot
+	}
+
+	//デフォルトはモンスター
+	PlayerType playerType = PlayerType.Monster;
+
 	public void Back()
 	{
 		Debug.Log("Back");
