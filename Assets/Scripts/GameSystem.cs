@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour {
 
+	public void Back()
+	{
+		Debug.Log("Back");
+	}
+
 	// Use this for initialization
 	void Start () {
 		
