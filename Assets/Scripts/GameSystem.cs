@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour {
@@ -60,7 +61,7 @@ public class GameSystem : MonoBehaviour {
 
 	public void Reset()
 	{
-		Application.LoadLevel(0);
+		SceneManager.LoadScene(0);
 	}
 
 	public void Submit()
